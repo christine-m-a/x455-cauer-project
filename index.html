@@ -46,7 +46,7 @@
         background-color: rgb(247, 174, 122);
       }
       body {
-        background-color: rgb(204, 100, 25);
+        background-color: rgb(247, 174, 122);
       }
       p {
         font-size: 150%;
@@ -57,6 +57,45 @@
       td {
         font-size: 1.5em;
       }
+      .dropbtn {
+  background-color: rgb(247, 174, 122);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(247, 174, 122);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(247, 174, 122)}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(247, 174, 122);
+}
     </style>
   </head>
   <body>
@@ -96,14 +135,14 @@
           ><img src="./img/logotype-thin.jpg" alt="logotype"
         /></a>
 
-        <!-- Right-sided navbar links. Hide them on small screens -->
+        <!-- centered navbar links. Hide them on small screens -->
         <div class="w3-center w3-hide-small" style="padding-top: 13px">
-          <a href="#home" class="w3-bar-item w3-button w3-large">Home</a>
-          <a href="#about" class="w3-bar-item w3-button w3-large">About</a>
-          <a href="#pies" class="w3-bar-item w3-button w3-large">Pies</a>
-          <a href="#heat" class="w3-bar-item w3-button w3-large">Heat</a>
-          <a href="#dough" class="w3-bar-item w3-button w3-large">Dough</a>
-          <a href="#featured" class="w3-bar-item w3-button w3-large"
+          <a href="#home" class="w3-bar-item w3-button w3-large" style="font-weight: bold;">Home</a>
+          <a href="#about" class="w3-bar-item w3-button w3-large" style="font-weight: bold;" >About</a>
+          <a href="#pies" class="w3-bar-item w3-button w3-large" style="font-weight: bold;">Pies</a>
+          <a href="#heat" class="w3-bar-item w3-button w3-large" style="font-weight: bold;">Heat</a>
+          <a href="#dough" class="w3-bar-item w3-button w3-large" style="font-weight: bold;">Dough</a>
+          <a href="#featured" class="w3-bar-item w3-button w3-large" style="font-weight: bold;"
             >Featured</a
           >
         </div>
@@ -136,22 +175,22 @@
         class="w3-bar-item w3-button w3-large w3-padding-16"
         >Close &times;</a
       >
-      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button" style="font-weight: bold;"
         >Home</a
       >
-      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button" style="font-weight: bold;"
         >About</a
       >
-      <a href="#pies" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#pies" onclick="w3_close()" class="w3-bar-item w3-button" style="font-weight: bold;"
         >Pies</a
       >
-      <a href="#heat" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#heat" onclick="w3_close()" class="w3-bar-item w3-button" style="font-weight: bold;"
         >Heat</a
       >
-      <a href="#dough" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#dough" onclick="w3_close()" class="w3-bar-item w3-button" style="font-weight: bold;"
         >Dough</a
       >
-      <a href="#featured" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#featured" onclick="w3_close()" class="w3-bar-item w3-button" style="font-weight: bold;"
         >Featured</a
       >
     </nav>
@@ -160,36 +199,52 @@
     <!-- Header -->
     <!-- Page Content -->
     <div class="w3-padding-large" id="main">
-      <!-- Header/Home -->
-      <header class="w3-container w3-padding-64 w3-center w3-custom3" id="home">
+       <!-- Homepage with big photo desktop -->
+       <header class="w3-content w3-hide-small w3-hide-medium" style="padding-top: 50px; max-width: 100em" id="home">
         <img
           src="./img/cover-image.jpg"
           alt="cover image"
           class="w3-image"
           width="100%"
         />
-      </header>
+       </header>
+
+       <!-- Homepage with big photo mobile -->
+       <header class="w3-content w3-hide-large w3-hide-medium" style="padding-top: 50px; max-width: 100em" id="home">
+        <img
+          src="./img/cover-image-mobile.jpg"
+          alt="cover image"
+          class="w3-image"
+          width="100%"
+        />
+       </header>
 
       <!-- Page content -->
       <div class="w3-content w3-custom2" style="max-width: 100em">
         <!-- About -->
+      
+       
         <div id="about" class="w3-padding-top-64 w3-custom2">
-          <h1 class="w3-center">ABOUT</h1>
-          <div class="w3-padding-large w3-center"></div>
+          <h1 class="w3-center" style="font-weight: bold;">ABOUT</h1>
+          <p class="w3-xlarge" style="padding-left: 1em; padding-right: 1em;">The number π (spelled out as "pi") is a mathematical constant that is the ratio 
+            of a circle's circumference to its diameter, approximately equal to 3.14159. 
+            A pie is a round baked dish that contains a filling of various sweet or 
+            savory ingredients.</p>
+          <div class="w3-center"></div>
         </div>
 
         <!-- Sweet -->
 
-        <div class="w3-row w3-padding-64">
+        <div class="w3-row w3-padding-32">
           <div class="w3-col l6 w3-padding-large">
-            <h5 class="w3-center">Sweet pies</h5>
-            <p class="w3-large">
+            <h2 class="w3-center" style="font-weight: bold; padding-top: 1em;">Sweet pies</h2>
+            <p class="w3-xlarge">
               Sweet pies may be filled with fruit (as in an apple pie), nuts
               (pecan pie), fruit preserves (jam tart), brown sugar (sugar pie),
               sweetened vegetables (rhubarb pie), or with thicker fillings based
               on eggs and dairy (as in custard pie and cream pie).
             </p>
-            <p class="w3-large">
+            <p class="w3-xlarge">
               Cherry pie, for example, is a pie baked with a cherry filling.
               Traditionally, cherry pie is made with sour cherries rather than
               sweet cherries. Morello cherries are one of the most common kinds
@@ -202,39 +257,37 @@
               target="_blank"
               >Source: wikipedia</a
             >
-            <br />
           </div>
 
           <div class="w3-col l6 w3-padding-large">
             <img
               src="./img/sweet-pie.jpg"
-              class="w3-round w3-image"
+              class="w3-image"
               alt="Sweet pie"
               style="width: 100%"
             />
           </div>
-        </div>
 
         <!-- Savory -->
 
-        <div class="w3-row w3-padding-64">
+        <div class="w3-row w3-padding-32">
           <div class="w3-col l6 w3-padding-large w3-hide-small w3-hide-medium">
             <img
               src="./img/savory-pie.jpg"
-              class="w3-round w3-image"
+              class="w3-image"
               alt="Savory pie"
               style="width: 100%"
             />
           </div>
 
           <div class="w3-col l6 w3-padding-large">
-            <h5 class="w3-center">Savory pies</h5>
-            <p class="w3-large">
+            <h2 class="w3-center" style="font-weight: bold; padding-top: 1em;" >Savory pies</h2>
+            <p class="w3-xlarge">
               Savory pies may be filled with meat (as in a steak pie or a
               Jamaican patty), eggs and cheese (such as quiches or British
               flans) or a mixture of meat and vegetables (pot pie).
             </p>
-            <p class="w3-large">
+            <p class="w3-xlarge">
               A pot pie, in US and Canadian dialects, is a type of meat pie with
               a top pie crust that is commonly used throughout the
               continent,consisting of flaky pastry. Pot pies may be made with a
@@ -253,16 +306,16 @@
           <div class="w3-col l6 w3-padding-large w3-hide-large">
             <img
               src="./img/savory-pie.jpg"
-              class="w3-round w3-image"
+              class="w3-image"
               alt="Savory pie"
               style="width: 100%"
             />
           </div>
         </div>
-
-        <!-- Pies -->
+      </div>
+<!-- Pies -->
         <div id="pies" class="w3-padding-top-64 w3-custom3">
-          <h1 class="w3-center">PIES</h1>
+          <h1 class="w3-content" style="text-align: center; font-weight: bold; padding-bottom: 2em;">PIES</h1>
           <div class="w3-content" style="max-width: 1200px">
             <img class="mySlides" src="./img/lemon.jpg" style="width: 100%" />
             <img
@@ -301,8 +354,9 @@
               style="width: 100%; display: none"
             />
 
+   <!--carousel desktop-->
             <div class="w3-row-padding w3-section">
-              <div class="w3-col s2">
+              <div class="w3-col s2 w3-hide-small w3-hide-medium">
                 <img
                   class="demo w3-opacity w3-hover-opacity-off"
                   src="./img/lemon.jpg"
@@ -310,67 +364,145 @@
                   onclick="currentDiv(1)"
                 />
               </div>
+              
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
                   src="./img/flamm.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(2)"
                 />
               </div>
+             
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
                   src="./img/apple.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(3)"
                 />
               </div>
+             
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
                   src="./img/egg.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(4)"
                 />
               </div>
+              
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
                   src="./img/cobbler.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(5)"
                 />
               </div>
+              
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
                   src="./img/arugula.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(6)"
                 />
               </div>
+              
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
                   src="./img/fisherman.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(7)"
                 />
               </div>
+             
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
                   src="./img/basil.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(8)"
                 />
               </div>
+             
+
+  <!--carousel mobile-->
+
+              <div class="w3-col s3 w3-hide-large w3-hide-medium">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off"
+                  src="./img/lemon.jpg"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(1)"
+                />
+              </div>
+              <div class="w3-col s3">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-large w3-hide-medium"
+                  src="./img/flamm.jpg"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(2)"
+                />
+              </div>
+              <div class="w3-col s3">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-large w3-hide-medium"
+                  src="./img/apple.jpg"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(3)"
+                />
+              </div>
+              <div class="w3-col s3">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-large w3-hide-medium"
+                  src="./img/egg.jpg"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(4)"
+                />
+              </div>
+              <div class="w3-col s3" style="padding-top: 1em;">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-large w3-hide-medium"
+                  src="./img/cobbler.jpg"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(5)"
+                />
+              </div>
+              <div class="w3-col s3" style="padding-top: 1em;">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-large w3-hide-medium"
+                  src="./img/arugula.jpg"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(6)"
+                />
+              </div>
+              <div class="w3-col s3" style="padding-top: 1em;">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-large w3-hide-medium"
+                  src="./img/fisherman.jpg"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(7)"
+                />
+              </div>
+              <div class="w3-col s3" style="padding-top: 1em;">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-large w3-hide-medium"
+                  src="./img/basil.jpg"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(8)"
+                />
+              </div>
+
+   <!--scrolling-->
+
             </div>
           </div>
-          <div class="w3-row">
+          <div class="w3-row" style="border: solid; border-color: rgb(204, 100, 25); border-width: 30px; padding-bottom: 4em;">
             <div
-              class="w3-col m4 w3-panel w3-custom2 w3-border-left w3-border-bottom w3-padding"
+              class="w3-col m4 w3-panel w3-custom2 w3-padding" style="border-right: solid; border-color: rgb(204, 100, 25); border-width: 10px; border-left: solid; border-color: rgb(204, 100, 25); border-width: 10px;"
             >
               <div
                 class="w3-center w3-custom2"
@@ -380,9 +512,9 @@
                   margin-top: -18px;
                 "
               >
-                <h2>Pizza</h2>
+                <h2 style="margin-top: 1em; font-weight: bold;">Pizza</h2>
               </div>
-              <div class="my-scrolling" style="padding-right: 10px">
+              <div class="my-scrolling" style="padding-right: 10px;">
                 <p>
                   Pizza is a traditional Italian dish typically consisting of a
                   flat base of leavened wheat-based dough topped with tomato,
@@ -402,7 +534,9 @@
               </div>
             </div>
             <div
-              class="w3-col m4 w3-panel w3-custom2 w3-border-left w3-border-bottom w3-padding"
+              class="w3-col m4 w3-panel w3-custom2 w3-padding" style="border-right: solid; border-color: rgb(204, 100, 25); border-width: 10px; border-left: solid; border-color: rgb(204, 100, 25); border-width: 10px;"
+              
+              
             >
               <div
                 class="w3-center w3-custom2"
@@ -412,7 +546,7 @@
                   margin-top: -18px;
                 "
               >
-                <h2>Quiche</h2>
+                <h2 style="margin-top: 1em; font-weight: bold;">Quiche</h2>
               </div>
               <div class="my-scrolling" style="padding-right: 10px">
                 <p>
@@ -426,7 +560,8 @@
             </div>
 
             <div
-              class="w3-col m4 w3-panel w3-custom2 w3-border-left w3-border-bottom w3-border-right w3-padding"
+              class="w3-col m4 w3-panel w3-custom2 w3-padding" style="border-right: solid; border-color: rgb(204, 100, 25); border-width: 10px; border-left: solid; border-color: rgb(204, 100, 25); border-width: 10px;"
+              
             >
               <div
                 class="w3-center w3-custom2"
@@ -436,7 +571,7 @@
                   margin-top: -18px;
                 "
               >
-                <h2>Cobbler</h2>
+                <h2 style="margin-top: 1em; font-weight: bold;" >Cobbler</h2>
               </div>
               <div class="my-scrolling" style="padding-right: 10px">
                 <p>
@@ -448,17 +583,14 @@
               </div>
             </div>
           </div>
-          <br />
-          <br />
         </div>
 
-        <!-- Heat -->
+        <!-- Heat desktop -->
 
-        <div id="heat" class="w3-container w3-padding-top-64 w3-custom2">
-          <h1 class="w3-center">HEAT</h1>
-          <br /><br />
+        <div id="heat" class="w3-container w3-padding-top-64 w3-custom2 w3-hide-small w3-hide-medium">
+          <h1 class="w3-center" style="font-weight: bold; padding-bottom: 2em;">HEAT</h1>
           <div class="w3-responsive">
-            <table id="myTable" class="w3-table-all">
+            <table id="myTable" class="w3-table-all" style="margin-bottom: 8em;">
               <thead>
                 <tr class="w3-custom" style="padding-bottom: 1em">
                   <th
@@ -481,9 +613,9 @@
                   >
                     Name<i
                       class="fa fa-long-arrow-down"
-                      style="padding-left: 20px; font-size: 15px;"
+                      style="padding-left: 20px; font-size: 20px;"
                     ></i
-                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                    ><i class="fa fa-long-arrow-up" style="font-size: 20px;"></i>
                   </th>
                   <th
                     style="
@@ -495,9 +627,9 @@
                   >
                     Suitable for<i
                       class="fa fa-long-arrow-down"
-                      style="padding-left: 20px; font-size: 15px;"
+                      style="padding-left: 20px; font-size: 20px;"
                     ></i
-                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                    ><i class="fa fa-long-arrow-up" style="font-size: 20px;"></i>
                   </th>
                   <th
                     style="
@@ -508,9 +640,9 @@
                   >
                     °C/°F<i
                       class="fa fa-long-arrow-down"
-                      style="padding-left: 20px; font-size: 15px;"
+                      style="padding-left: 20px; font-size: 20px;"
                     ></i
-                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                    ><i class="fa fa-long-arrow-up" style="font-size: 20px;"></i>
                   </th>
                 </tr>
               </thead>
@@ -672,21 +804,259 @@
               </tr>
             </table>
           </div>
-          <br />
-          <br />
         </div>
+
+
+        <!-- Heat mobile -->
+
+        <div id="heat" class="w3-container w3-padding-top-64 w3-custom2 w3-hide-large w3-hide-medium">
+          <h1 class="w3-center" style="font-weight: bold; padding-bottom: 2em;">HEAT</h1>
+          <div class="w3-responsive">
+            <table id="myTable" class="w3-table-all" style="margin-bottom: 8em;">
+              <thead>
+                <tr class="w3-custom" style="padding-bottom: 1em">
+                  <th
+                    style="
+                      width: 5em;
+                      border-bottom: 15px solid rgb(227, 144, 92);
+                      text-align: left;
+                      padding-top: 20px;
+                      font-size: 1em;
+                      padding-top: 15px;
+                    "
+                  >
+                    Heat Source
+                  </th>
+                  <th id="name"
+                    style="
+                      width: 15em;
+                      border-bottom: 15px solid rgb(227, 144, 92);
+                      text-align: left;
+                      padding-top: 20px;
+                      font-size: 1em;
+                      padding-top: 15px;
+                    "
+                  >
+                    Name<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 5px; font-size: 15px;"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                  </th>
+                  <th id="suitable"
+                    style="
+                      width: 25em;
+                      border-bottom: 15px solid rgb(227, 144, 92);
+                      text-align: left;
+                      font-size: 1em;
+                      padding-top: 15px;
+                    "
+                  >
+                    Suitability<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 5px; font-size: 15px;"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                  </th>
+                  <th id="cf"
+                    style="
+                      width: 15em;
+                      border-bottom: 15px solid rgb(227, 144, 92);
+                      text-align: left;
+                      font-size: 1em;
+                      padding-top: 15px;
+                    "
+                  >
+                    °C/°F<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 5px; font-size: 15px;"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                  </th>
+                </tr>
+              </thead>
+              <tr
+                class="w3-hover-custom2 w3-custom"
+                style="border-bottom: 15px solid rgb(227, 144, 92)"
+              >
+                <td>
+                  <img
+                    src="./img/woodfire.jpg"
+                    alt="woodfire oven"
+                    style="width: 5em"
+                  />
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-right: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Woodfire Oven
+                </td>
+                <td
+                  style="
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Pizza
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-bottom: 15px solid rgb(227, 144, 92);
+                    text-align: center; 
+                    font-size: 1em;
+                  "
+                >
+                  370/700
+                </td>
+              </tr>
+              <tr
+                class="w3-hover-custom2 w3-custom"
+                style="border-bottom: 15px solid rgb(227, 144, 92)"
+              >
+                <td>
+                  <img
+                    src="./img/airfry.jpg"
+                    alt="airfryer"
+                    style="width: 5em"
+                  />
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-right: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Air Fryer
+                </td>
+                <td
+                  style="
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  6” Pies
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  200/400
+                </td>
+              </tr>
+              <tr
+                class="w3-hover-custom2 w3-custom"
+                style="border-bottom: 15px solid rgb(227, 144, 92)"
+              >
+                <td>
+                  <img
+                    src="./img/fire.jpg"
+                    alt="open fire"
+                    style="width: 5em"
+                  />
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-right: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Open Flame
+                </td>
+                <td
+                  style="
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Flammbrot
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  450/840
+                </td>
+              </tr>
+              <tr
+                class="w3-hover-custom2 w3-custom"
+                style="border-bottom: 15px solid rgb(227, 144, 92)"
+              >
+                <td>
+                  <img
+                    src="./img/oven.jpg"
+                    alt="electric oven"
+                    style="width: 5em"
+                  />
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-right: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Electric Oven
+                </td>
+                <td
+                  style="
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Pot Pies
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  230/450
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
 
         <!-- Dough large -->
         <div
           id="dough"
           class="w3-container w3-padding-top-64 w3-custom3 w3-responsive"
         >
-          <h1 class="w3-center w3-hide-small w3-hide-medium">DOUGH</h1>
-          <br />
-
+          <h1 class="w3-center w3-hide-small w3-hide-medium" style="font-weight: bold; padding-bottom: 2em;">DOUGH</h1>
           <div class="w3-row w3-hide-small w3-hide-medium" style="margin-right: 12%">
             <div class="w3-col m4 w3-center" style="float:left; padding-bottom:
-            100px;">
+            35px; padding-left: 8em;">
             <iframe
               height="400em"
               width="600em"
@@ -697,7 +1067,8 @@
             >
             </iframe>
           </div>
-          <div class="w3-col m4 w3-center w3-hide-small w3-hide-medium" style="float: right">
+          <div class="w3-col m4 w3-center w3-hide-small w3-hide-medium" style="padding-bottom:
+            35px; padding-left: 22em;">
             <iframe
               height="400em"
               width="600em"
@@ -712,7 +1083,7 @@
         <div class="w3-row w3-hide-small w3-hide-medium" style="margin-right: 12%">
           <div
             class="w3-col m4 w3-center"
-            style="float: left; padding-bottom: 100px"
+            style="float: left; padding-bottom: 35px; padding-left: 8em;"
           >
             <iframe
               height="400em"
@@ -726,7 +1097,7 @@
           </div>
           <div
             class="w3-col m4 w3-center"
-            style="float: right; padding-bottom: 100px"
+            style="padding-bottom: 35px; padding-left: 22em;"
           >
             <iframe
               height="400em"
@@ -745,15 +1116,14 @@
          id="dough"
          class="w3-container w3-padding-top-64 w3-custom3 w3-responsive"
        >
-         <h1 class="w3-center w3-hide-large w3-hide-medium">DOUGH</h1>
-         <br />
+         <h1 class="w3-center w3-hide-large w3-hide-medium" style="font-weight: bold; padding-bottom: 2em;">DOUGH</h1>
 
          <div class="w3-row w3-hide-large w3-hide-medium" style="margin-right: 12%">
            <div class="w3-col m4 w3-center" style="float:left; padding-bottom:
            50px;">
            <iframe
              height=300px
-             width=120%
+             width=115%
              src="https://www.youtube.com/embed/g-dF_j3AVTw?si=3_DbSbn_cKdQrIAl"
              title="How to make puff pastry"
              frameborder="0"
@@ -765,7 +1135,7 @@
            50px;">
            <iframe
              height=300px
-             width=120%
+             width=115%
              src="https://www.youtube.com/embed/qLY9IQa_fOw?si=bNSr2-1OkRtzMxIB"
              title="How to make Neapolitan pizza"
              frameborder="0"
@@ -781,7 +1151,7 @@
          >
            <iframe
              height=300px
-             width=120%
+             width=115%
              src="https://www.youtube.com/embed/kak5JIlDjxc?si=zSOr9W5McRo_6kUd"
              title="How to make blueberry pie"
              frameborder="0"
@@ -795,7 +1165,7 @@
          >
            <iframe
              height=300px
-             width=120%
+             width=115%
              src="https://www.youtube.com/embed/rBWM6fv81-0?si=TYYZMyi4SB7D1Rlo"
              title="Bob Wills & His Texas Playboys - Tater Pie (1950)"
              frameborder="0"
@@ -807,16 +1177,17 @@
 
            <!-- Dough accordion large -->
 
-        <div class="w3-row-padding w3-hide-small w3-hide-medium" style="margin: 15px 0px">
+        <div class="w3-row-padding w3-hide-small w3-hide-medium" style="margin: 15px 0px; margin-bottom: 8em;">
           <div class="w3-col s6" style="padding-right: 20px">
             <button
               onclick="myAccordion('accordion1')"
               class="w3-button w3-block w3-custom2 w3-center-align"
             >
-              <h4>
-                Working with sourdough<i
+              <h4 style="font-weight: bold;">
+                Working with sourdough
+                <i
                   class="fa fa-caret-down"
-                  style="padding-left: 20px"
+                  style="padding-left: 20px;"
                 ></i>
               </h4>
             </button>
@@ -838,7 +1209,7 @@
               onclick="myAccordion('accordion2')"
               class="w3-button w3-block w3-custom2 w3-center-align"
             >
-              <h4>
+              <h4 style="font-weight: bold;">
                 The secret of flaky pastry<i
                   class="fa fa-caret-down"
                   style="padding-left: 20px"
@@ -859,21 +1230,17 @@
             </div>
           </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
       </div>
 
        <!-- Dough accordion small -->
 
-       <div class="w3-row-padding w3-hide-large w3-hide-medium" style="margin: 15px 0px">
+       <div class="w3-row-padding w3-hide-large w3-hide-medium" style="margin: 15px 0px; margin-bottom: 4em;">
         <div class="w3-col s6" style="padding-right: 20px">
           <button
             onclick="myAccordion('accordion3')"
             class="w3-button w3-block w3-custom2 w3-center-align"
           >
-            <h4 style="text-wrap: wrap; text-align: left;">
+            <h4 style="text-wrap: wrap; text-align: left; font-weight: bold;">
               Working with sourdough<i
                 class="fa fa-caret-down"
                 style="padding-left: 20px"
@@ -883,7 +1250,7 @@
           <div
             id="accordion3"
             class="w3-hide w3-container"
-            style="height: 500px; background-color: rgb(247, 174, 122)"
+            style="height: 600px; background-color: rgb(247, 174, 122)"
           >
             <p style="font-size: 20px;">
               A drier and cooler starter has less bacterial activity and more
@@ -898,7 +1265,7 @@
             onclick="myAccordion('accordion4')"
             class="w3-button w3-block w3-custom2 w3-center-align"
           >
-            <h4 style="text-wrap: wrap; text-align: left">
+            <h4 style="text-wrap: wrap; text-align: left; font-weight: bold;">
               The secret of flaky pastry<i
                 class="fa fa-caret-down"
                 style="padding-left: 20px;"
@@ -908,7 +1275,7 @@
           <div
             id="accordion4"
             class="w3-hide w3-container"
-            style="height: 500px; background-color: rgb(247, 174, 122)"
+            style="height: 600px; background-color: rgb(247, 174, 122)"
           >
             <p style="font-size: 20px;">
               Cold butter is the key to flaky crusts. Do not skip this step.
@@ -919,10 +1286,6 @@
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
 
 
@@ -930,7 +1293,7 @@
     
       <!-- Featured -->
       <div id="featured" class="w3-container w3-padding-top-64 w3-custom2">
-        <h1 class="w3-center">FEATURED</h1>
+        <h1 class="w3-center" style="font-weight: bold; padding-bottom: 2em;">FEATURED</h1>
 
         <div class="w3-row-padding" style="margin: 15px 0px">
           <div class="w3-col s6">
@@ -941,13 +1304,26 @@
               class="w3-hover-shadow"
             />
             <h4
-              class="w3-center w3-black"
+              class="w3-center w3-black w3-hide-small w3-hide-medium"
               style="
                 font-size: 1.2em;
                 margin: 0px;
                 height: 60px;
                 padding-top: 15px;
                 padding-right: 10px;
+              "
+            >
+              Costco's Pumpkin Pie
+            </h4>
+            <h4
+              class="w3-center w3-black w3-hide-large w3-hide-medium"
+              style="
+                font-size: 1em;
+                margin: 0px;
+                height: 60px;
+                padding-top: 1.25em;
+                padding-right: 10px;
+                padding-bottom: 2.25em;
               "
             >
               Costco's Pumpkin Pie
@@ -961,7 +1337,7 @@
               class="w3-hover-shadow"
             />
             <h4
-              class="w3-center w3-black"
+              class="w3-center w3-black w3-hide-small w3-hide-medium"
               style="
                 font-size: 1.2em;
                 margin: 0px;
@@ -971,6 +1347,19 @@
               "
             >
               Duke's Hula Pie
+            </h4>
+            <h4
+              class="w3-center w3-black w3-hide-large w3-hide-medium"
+              style="
+                font-size: 1em;
+                margin: 0px;
+                height: 60px;
+                padding-top: 1.25em;
+                padding-right: 10px;
+                padding-bottom: 2.25em;
+              "
+            >
+            Duke's Hula Pie
             </h4>
           </div>
         </div>
@@ -984,13 +1373,26 @@
               class="w3-hover-shadow"
             />
             <h4
-              class="w3-center w3-black"
+              class="w3-center w3-black w3-hide-small w3-hide-medium"
               style="
                 font-size: 1.2em;
                 margin: 0px;
                 height: 60px;
                 padding-top: 15px;
                 padding-right: 10px;
+              "
+            >
+              Boston Cream Pie @Davenport Roadhouse
+            </h4>
+            <h4
+              class="w3-center w3-black w3-hide-large w3-hide-medium"
+              style="
+                font-size: 1em;
+                margin: 0px;
+                height: 60px;
+                padding-top: 0.5em;
+                padding-right: 10px;
+                padding-bottom: 3.5em;
               "
             >
               Boston Cream Pie @Davenport Roadhouse
@@ -1004,7 +1406,7 @@
               class="w3-hover-shadow"
             />
             <h4
-              class="w3-center w3-black"
+              class="w3-center w3-black w3-hide-small w3-hide-medium"
               style="
                 font-size: 1.2em;
                 margin: 0px;
@@ -1015,6 +1417,20 @@
             >
               Beckman's Apple Pie
             </h4>
+          </h4>
+          <h4
+            class="w3-center w3-black w3-hide-large w3-hide-medium"
+            style="
+              font-size: 1em;
+              margin: 0px;
+              height: 60px;
+              padding-top: 1.25em;
+              padding-right: 10px;
+              padding-bottom: 2.25em;
+            "
+          >
+          Beckman's Apple Pie
+          </h4>
           </div>
         </div>
 
@@ -1027,7 +1443,7 @@
               class="w3-hover-shadow"
             />
             <h4
-              class="w3-center w3-black"
+              class="w3-center w3-black w3-hide-small w3-hide-medium"
               style="
                 font-size: 1.2em;
                 margin: 0px;
@@ -1038,6 +1454,19 @@
             >
               Beckman's Pumpkin Pie
             </h4>
+            <h4
+            class="w3-center w3-black w3-hide-large w3-hide-medium"
+            style="
+              font-size: 1em;
+              margin: 0px;
+              height: 60px;
+              padding-top: 1.25em;
+              padding-right: 10px;
+              padding-bottom: 2.25em;
+            "
+          >
+          Beckman's Pumpkin Pie
+          </h4>
           </div>
           <div class="w3-col s6">
             <img
@@ -1047,7 +1476,7 @@
               class="w3-hover-shadow"
             />
             <h4
-              class="w3-center w3-black"
+              class="w3-center w3-black w3-hide-small w3-hide-medium"
               style="
                 font-size: 1.2em;
                 margin: 0px;
@@ -1058,6 +1487,19 @@
             >
               Gustavo Gusto's Frozen Margherita
             </h4>
+            <h4
+            class="w3-center w3-black w3-hide-large w3-hide-medium"
+            style="
+              font-size: 1em;
+              margin: 0px;
+              height: 60px;
+              padding-top: 0.5em;
+              padding-right: 10px;
+              padding-bottom: 3.5em;
+            "
+          >
+          Gustavo Gusto's Frozen Margherita
+          </h4>
           </div>
         </div>
 
@@ -1067,7 +1509,7 @@
             style="cursor: pointer"
             >&times;</span
           >
-          <div class="w3-modal-content w3-animate-zoom" style="border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
+          <div class="w3-modal-content w3-animate-zoom" style="width: 45%; border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
             <img src="./img/costco-without.jpg" style="width: 100%" />
             <h4
               class="w3-center w3-black"
@@ -1089,7 +1531,7 @@
             style="cursor: pointer"
             >&times;</span
           >
-          <div class="w3-modal-content w3-animate-zoom" style="border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
+          <div class="w3-modal-content w3-animate-zoom" style="width: 45%; border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
             <img src="./img/dukes-without.jpg" style="width: 100%" />
             <h4
               class="w3-center w3-black"
@@ -1111,7 +1553,7 @@
             style="cursor: pointer"
             >&times;</span
           >
-          <div class="w3-modal-content w3-animate-zoom" style="border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
+          <div class="w3-modal-content w3-animate-zoom" style="width: 45%; border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
             <img src="./img/davenport-without.jpg" style="width: 100%" />
             <h4
               class="w3-center w3-black"
@@ -1133,7 +1575,7 @@
             style="cursor: pointer"
             >&times;</span
           >
-          <div class="w3-modal-content w3-animate-zoom" style="border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
+          <div class="w3-modal-content w3-animate-zoom" style="width: 45%; border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
             <img src="./img/beckman-apple-without.jpg" style="width: 100%" />
             <h4
               class="w3-center w3-black"
@@ -1155,7 +1597,7 @@
             style="cursor: pointer"
             >&times;</span
           >
-          <div class="w3-modal-content w3-animate-zoom" style="border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
+          <div class="w3-modal-content w3-animate-zoom" style="width: 45%; border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
             <img src="./img/beckman-pumpkin-without.jpg" style="width: 100%" />
             <h4
               class="w3-center w3-black"
@@ -1177,7 +1619,7 @@
             style="cursor: pointer"
             >&times;</span
           >
-          <div class="w3-modal-content w3-animate-zoom" style="border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
+          <div class="w3-modal-content w3-animate-zoom" style="width: 45%; border: solid; border-width: 5px; border-color: rgb(247, 174, 122);">
             <img src="./img/frozen-without.jpg" style="width: 100%" />
             <h4
               class="w3-center w3-black"
