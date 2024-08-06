@@ -106,7 +106,7 @@
         style="letter-spacing: 4px"
       >
         <div>
-          <a class="w3-right"
+          <a class="w3-right w3-hide-small w3-hide-medium"
             ><i
               class="fa fa-shopping-cart w3-text-black w3-hover-custom2"
               style="
@@ -118,7 +118,7 @@
               "
             ></i
           ></a>
-          <a class="w3-right"
+          <a class="w3-right w3-hide-small w3-hide-medium"
             ><i
               class="fa fa-search w3-text-black w3-hover-custom2"
               style="
@@ -131,9 +131,40 @@
             ></i
           ></a>
         </div>
-        <a href="#home" class="w3-bar-item w3-button" style="padding: 0em"
+
+        <div>
+          <a class="w3-right w3-hide-large w3-hide-medium"
+            ><i
+              class="fa fa-shopping-cart w3-text-black w3-hover-custom2"
+              style="
+                font-size: 16px;
+                padding-top: 0.5em;
+                padding-right: 0.5em;
+                padding-bottom: 0.5em;
+                padding-left: 0.5em;
+              "
+            ></i
+          ></a>
+          <a class="w3-right w3-hide-large w3-hide-medium"
+            ><i
+              class="fa fa-search w3-text-black w3-hover-custom2"
+              style="
+                font-size: 16px;
+                padding-top: 0.5em;
+                padding-right: 0.5em;
+                padding-bottom: 0.5em;
+                padding-left: 0.5em;
+              "
+            ></i
+          ></a>
+        </div>
+        <a href="#home" class="w3-bar-item w3-button w3-hide-small w3-hide-medium" style="padding: 0em"
           ><img src="./img/logotype-thin.jpg" alt="logotype"
         /></a>
+
+        <a href="#home" class="w3-bar-item w3-button w3-hide-large w3-hide-medium" style="padding: 0em"
+        ><img src="./img/logotype-mobile.jpg" alt="logotype"
+      /></a>
 
         <!-- centered navbar links. Hide them on small screens -->
         <div class="w3-center w3-hide-small" style="padding-top: 13px">
@@ -151,12 +182,12 @@
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
         <a
           href="javascript:void(0)"
-          class="w3-bar-item w3-button w3-left w3-xlarge w3-hide-large w3-hide-medium"
+          class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium"
           onclick="w3_open()"
         >
           <i
             class="fa fa-bars"
-            style="padding-top: 0.2em; padding-bottom: 0.2em"
+            style="font-size: 16px;"
           ></i>
         </a>
         <!-- end added for mobile version -->
@@ -821,8 +852,8 @@
                       border-bottom: 15px solid rgb(227, 144, 92);
                       text-align: left;
                       padding-top: 20px;
-                      font-size: 1em;
-                      padding-top: 15px;
+                      font-size: 0.8em;
+                      padding-top: 10px;
                     "
                   >
                     Heat Source
@@ -833,45 +864,45 @@
                       border-bottom: 15px solid rgb(227, 144, 92);
                       text-align: left;
                       padding-top: 20px;
-                      font-size: 1em;
-                      padding-top: 15px;
+                      font-size: 0.8em;
+                      padding-top: 10px;
                     "
                   >
                     Name<i
                       class="fa fa-long-arrow-down"
-                      style="padding-left: 5px; font-size: 15px;"
+                      style="padding-left: 5px; font-size: 12px;"
                     ></i
-                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                    ><i class="fa fa-long-arrow-up" style="font-size: 12px;"></i>
                   </th>
                   <th id="suitable"
                     style="
                       width: 25em;
                       border-bottom: 15px solid rgb(227, 144, 92);
                       text-align: left;
-                      font-size: 1em;
-                      padding-top: 15px;
+                      font-size: 0.8em;
+                      padding-top: 10px;
                     "
                   >
                     Suitability<i
                       class="fa fa-long-arrow-down"
-                      style="padding-left: 5px; font-size: 15px;"
+                      style="padding-left: 5px; font-size: 12px;"
                     ></i
-                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                    ><i class="fa fa-long-arrow-up" style="font-size: 12px;"></i>
                   </th>
                   <th id="cf"
                     style="
                       width: 15em;
                       border-bottom: 15px solid rgb(227, 144, 92);
                       text-align: left;
-                      font-size: 1em;
-                      padding-top: 15px;
+                      font-size: 0.8em;
+                      padding-top: 10px;
                     "
                   >
                     °C/°F<i
                       class="fa fa-long-arrow-down"
-                      style="padding-left: 5px; font-size: 15px;"
+                      style="padding-left: 5px; font-size: 12px;"
                     ></i
-                    ><i class="fa fa-long-arrow-up" style="font-size: 15px;"></i>
+                    ><i class="fa fa-long-arrow-up" style="font-size: 12px;"></i>
                   </th>
                 </tr>
               </thead>
@@ -1234,23 +1265,24 @@
 
        <!-- Dough accordion small -->
 
-       <div class="w3-row-padding w3-hide-large w3-hide-medium" style="margin: 15px 0px; margin-bottom: 4em;">
-        <div class="w3-col s6" style="padding-right: 20px">
+       <div class="w3-row-padding w3-hide-large w3-hide-medium" style="margin: 15px 0px; margin-bottom: 2em;">
+       
+        <div class="w3-col s12" style="padding-right: 10px; padding-left: 10px">
           <button
             onclick="myAccordion('accordion3')"
             class="w3-button w3-block w3-custom2 w3-center-align"
           >
-            <h4 style="text-wrap: wrap; text-align: left; font-weight: bold;">
+            <h5 style="text-wrap: wrap; text-align: left; font-weight: bold;">
               Working with sourdough<i
                 class="fa fa-caret-down"
                 style="padding-left: 20px"
               ></i>
-            </h4>
+            </h5>
           </button>
           <div
             id="accordion3"
             class="w3-hide w3-container"
-            style="height: 600px; background-color: rgb(247, 174, 122)"
+            style="height: 300px; background-color: rgb(247, 174, 122)"
           >
             <p style="font-size: 20px;">
               A drier and cooler starter has less bacterial activity and more
@@ -1260,22 +1292,26 @@
             </p>
           </div>
         </div>
-        <div class="w3-col s6" style="padding-left: 20px">
+      </div>
+
+      <div class="w3-row-padding w3-hide-large w3-hide-medium" style="margin: 15px 0px; margin-bottom: 4em;">
+       
+        <div class="w3-col s12" style="padding-right: 10px; padding-left: 10px">
           <button
             onclick="myAccordion('accordion4')"
             class="w3-button w3-block w3-custom2 w3-center-align"
           >
-            <h4 style="text-wrap: wrap; text-align: left; font-weight: bold;">
+            <h5 style="text-wrap: wrap; text-align: left; font-weight: bold;">
               The secret of flaky pastry<i
                 class="fa fa-caret-down"
                 style="padding-left: 20px;"
               ></i>
-            </h4>
+            </h5>
           </button>
           <div
             id="accordion4"
             class="w3-hide w3-container"
-            style="height: 600px; background-color: rgb(247, 174, 122)"
+            style="height: 350px; background-color: rgb(247, 174, 122)"
           >
             <p style="font-size: 20px;">
               Cold butter is the key to flaky crusts. Do not skip this step.
@@ -1285,7 +1321,9 @@
             </p>
           </div>
         </div>
+
       </div>
+
     </div>
 
 
@@ -1318,12 +1356,12 @@
             <h4
               class="w3-center w3-black w3-hide-large w3-hide-medium"
               style="
-                font-size: 1em;
+                font-size: 0.8em;
                 margin: 0px;
-                height: 60px;
-                padding-top: 1.25em;
+                height: 45px;
+                padding-top: 1em;
                 padding-right: 10px;
-                padding-bottom: 2.25em;
+                padding-bottom: 2.5em;
               "
             >
               Costco's Pumpkin Pie
@@ -1351,12 +1389,12 @@
             <h4
               class="w3-center w3-black w3-hide-large w3-hide-medium"
               style="
-                font-size: 1em;
+                font-size: 0.8em;
                 margin: 0px;
-                height: 60px;
-                padding-top: 1.25em;
+                height: 45px;
+                padding-top: 1em;
                 padding-right: 10px;
-                padding-bottom: 2.25em;
+                padding-bottom: 2.5em;
               "
             >
             Duke's Hula Pie
@@ -1387,12 +1425,12 @@
             <h4
               class="w3-center w3-black w3-hide-large w3-hide-medium"
               style="
-                font-size: 1em;
+                font-size: 0.8em;
                 margin: 0px;
-                height: 60px;
-                padding-top: 0.5em;
+                height: 45px;
+                padding-top: 0.25em;
                 padding-right: 10px;
-                padding-bottom: 3.5em;
+                padding-bottom: 0.5em;
               "
             >
               Boston Cream Pie @Davenport Roadhouse
@@ -1421,12 +1459,12 @@
           <h4
             class="w3-center w3-black w3-hide-large w3-hide-medium"
             style="
-              font-size: 1em;
+              font-size: 0.8em;
               margin: 0px;
-              height: 60px;
-              padding-top: 1.25em;
+              height: 45px;
+              padding-top: 1em;
               padding-right: 10px;
-              padding-bottom: 2.25em;
+              padding-bottom: 2.5em;
             "
           >
           Beckman's Apple Pie
@@ -1457,12 +1495,12 @@
             <h4
             class="w3-center w3-black w3-hide-large w3-hide-medium"
             style="
-              font-size: 1em;
+              font-size: 0.8em;
               margin: 0px;
-              height: 60px;
-              padding-top: 1.25em;
+              height: 45px;
+              padding-top: 1em;
               padding-right: 10px;
-              padding-bottom: 2.25em;
+              padding-bottom: 2.5em;
             "
           >
           Beckman's Pumpkin Pie
@@ -1490,12 +1528,12 @@
             <h4
             class="w3-center w3-black w3-hide-large w3-hide-medium"
             style="
-              font-size: 1em;
+              font-size: 0.8em;
               margin: 0px;
-              height: 60px;
-              padding-top: 0.5em;
+              height: 45px;
+              padding-top: 0.25em;
               padding-right: 10px;
-              padding-bottom: 3.5em;
+              padding-bottom: 0.5em;
             "
           >
           Gustavo Gusto's Frozen Margherita
