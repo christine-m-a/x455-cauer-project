@@ -256,9 +256,7 @@ a {
   width: 100%;
   display: table;
 }
-.w3-table-all {
-  border: 1px solid rgb(247, 174, 122);
-}
+
 .w3-bordered tr,
 .w3-table-all tr {
   border-bottom: 1px solid rgb(247, 174, 122);

@@ -123,25 +123,7 @@
    
    <!---table styles start---->
     <style>
-      /************************************************/
-      /*************** GENERAL SETTINGS ***************/
-      /************************************************/
-
-      *,
-      :before,
-      :after {
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: rgb(247, 174, 122);
-        color: black;
-        font: 14px/1.25 "EB Garamond", serif;
-        
-      }
-
      
-
       /************************************************/
       /********************* TABLE ********************/
       /************************************************/
@@ -154,9 +136,11 @@
       }
 
       /*** HEADER ***/
+      
       table thead {
-        border-bottom: 4px solid rgb(204, 100, 25); 
+        border-bottom: 0px;
       }
+
 
       table th,
       table td {
@@ -176,7 +160,7 @@
 
       table th:hover,
       table th:focus {
-        color: rgb(204, 100, 25);
+        color: black;
       }
 
       /* Arrows */
@@ -207,13 +191,13 @@
 
       table th:hover:before,
       table th:focus:before {
-        border-bottom-color: rgb(227, 144, 92);
+        border-bottom-color: black;
         
       }
 
       table th:hover:after,
       table th:focus:after {
-        border-top-color: rgb(227, 144, 92);
+        border-top-color: black;
       }
 
       table th[aria-sort="ascending"],
@@ -226,12 +210,12 @@
       }
 
       table th[aria-sort="ascending"]:after {
-        border-top-color: rgb(227, 144, 92);
+        border-top-color: rgb(204, 100, 25);
         
       }
 
       table th[aria-sort="descending"]:before {
-        border-bottom-color: rgb(227, 144, 92);
+        border-bottom-color: rgb(204, 100, 25);
         
       }
 
@@ -248,7 +232,7 @@
 
       table tbody > tr:hover {
         background-color: rgb(247, 174, 122);
-        border-color: rgb(227, 144, 92);
+        
         color: rgb(204, 100, 25);
       }
 
@@ -294,7 +278,7 @@
           font-weight: bold;
           left: 0.5em;
           position: absolute;
-          top: 0.125em;
+          top: 0.5em;
           width: 100%;
         }
       }
@@ -336,7 +320,7 @@
         </div>
 
         <div>
-          <a class="w3-right w3-hide-large w3-hide-medium"
+          <a class="w3-right w3-hide-large"
             ><i
               class="fa fa-shopping-cart w3-text-black w3-hover-custom2"
               style="
@@ -348,7 +332,7 @@
               "
             ></i
           ></a>
-          <a class="w3-right w3-hide-large w3-hide-medium"
+          <a class="w3-right w3-hide-large"
             ><i
               class="fa fa-search w3-text-black w3-hover-custom2"
               style="
@@ -370,13 +354,13 @@
 
         <a
           href="#home"
-          class="w3-bar-item w3-button w3-hide-large w3-hide-medium"
+          class="w3-bar-item w3-button w3-hide-large"
           style="padding: 0em"
           ><img src="./img/logotype-mobile.jpg" alt="logotype"
         /></a>
 
         <!-- centered navbar links. Hide them on small screens -->
-        <div class="w3-center w3-hide-small" style="padding-top: 13px">
+        <div class="w3-center w3-hide-small w3-hide-medium" style="padding-top: 13px">
           <a
             href="#home"
             class="w3-bar-item w3-button w3-large"
@@ -419,7 +403,7 @@
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
         <a
           href="javascript:void(0)"
-          class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium"
+          class="w3-bar-item w3-button w3-left w3-hide-large"
           onclick="w3_open()"
         >
           <i class="fa fa-bars" style="font-size: 16px"></i>
@@ -665,7 +649,7 @@
 
             <!--carousel desktop-->
             <div class="w3-row-padding w3-section">
-              <div class="w3-col s2 w3-hide-small w3-hide-medium">
+              <div class="w3-col s2 w3-hide-small">
                 <img
                   class="demo w3-opacity w3-hover-opacity-off"
                   src="./img/lemon.jpg"
@@ -676,7 +660,7 @@
 
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small"
                   src="./img/flamm.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(2)"
@@ -685,7 +669,7 @@
 
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small"
                   src="./img/apple.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(3)"
@@ -694,7 +678,7 @@
 
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small"
                   src="./img/egg.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(4)"
@@ -703,7 +687,7 @@
 
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small"
                   src="./img/cobbler.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(5)"
@@ -712,7 +696,7 @@
 
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small"
                   src="./img/arugula.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(6)"
@@ -721,7 +705,7 @@
 
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small"
                   src="./img/fisherman.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(7)"
@@ -730,7 +714,7 @@
 
               <div class="w3-col s2">
                 <img
-                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small w3-hide-medium"
+                  class="demo w3-opacity w3-hover-opacity-off w3-hide-small"
                   src="./img/basil.jpg"
                   style="width: 100%; cursor: pointer"
                   onclick="currentDiv(8)"
@@ -1144,15 +1128,18 @@
        
         <div
           id="heatmobile"
-          class="w3-container w3-padding-top-64 w3-custom2 w3-hide-large w3-hide-medium"
+          class="w3-container w3-padding-top-64 w3-hide-large"
         >
           <h1 class="w3-center" style="font-weight: bold; padding-bottom: 2em">
             HEAT
           </h1>
           <div class="w3-responsive">
           
+            
+
+          
             <table>
-              <thead>
+              <thead style="width: 50%; font-size: 20px; background-color: rgb(247, 174, 122); border: 4px solid rgb(204, 100, 25)">
                 <tr>
                   <th>Heat Source</th>
                   <th>Name</th>
@@ -1160,7 +1147,7 @@
                   <th>°C/°F</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody style="width: 50%">
                 <tr>
                   <td data-label="Heat Source"><img
                     src="./img/woodfire.jpg"
@@ -1229,11 +1216,11 @@
           >
             <div
               class="w3-col m4 w3-center"
-              style="float: left; padding-bottom: 35px; padding-left: 8em"
+              style="float: left; padding-bottom: 35px; padding-left: 10em"
             >
               <iframe
-                height="400em"
-                width="600em"
+                height="300em"
+                width="500em"
                 src="https://www.youtube.com/embed/g-dF_j3AVTw?si=3_DbSbn_cKdQrIAl"
                 title="How to make puff pastry"
                 frameborder="0"
@@ -1243,11 +1230,11 @@
             </div>
             <div
               class="w3-col m4 w3-center w3-hide-small w3-hide-medium"
-              style="padding-bottom: 35px; padding-left: 22em"
+              style="padding-bottom: 35px; padding-left: 24em"
             >
               <iframe
-                height="400em"
-                width="600em"
+                height="300em"
+                width="500em"
                 src="https://www.youtube.com/embed/qLY9IQa_fOw?si=bNSr2-1OkRtzMxIB"
                 title="How to make Neapolitan pizza"
                 frameborder="0"
@@ -1262,11 +1249,11 @@
           >
             <div
               class="w3-col m4 w3-center"
-              style="float: left; padding-bottom: 35px; padding-left: 8em"
+              style="float: left; padding-bottom: 35px; padding-left: 10em"
             >
               <iframe
-                height="400em"
-                width="600em"
+                height="300em"
+                width="500em"
                 src="https://www.youtube.com/embed/kak5JIlDjxc?si=zSOr9W5McRo_6kUd"
                 title="How to make blueberry pie"
                 frameborder="0"
@@ -1276,11 +1263,11 @@
             </div>
             <div
               class="w3-col m4 w3-center"
-              style="padding-bottom: 35px; padding-left: 22em"
+              style="padding-bottom: 35px; padding-left: 24em"
             >
               <iframe
-                height="400em"
-                width="600em"
+                height="300em"
+                width="500em"
                 src="https://www.youtube.com/embed/rBWM6fv81-0?si=TYYZMyi4SB7D1Rlo"
                 title="Bob Wills & His Texas Playboys - Tater Pie (1950)"
                 frameborder="0"
@@ -1296,14 +1283,14 @@
             class="w3-container w3-padding-top-64 w3-custom3 w3-responsive"
           >
             <h1
-              class="w3-center w3-hide-large w3-hide-medium"
+              class="w3-center w3-hide-large"
               style="font-weight: bold; padding-bottom: 2em"
             >
               DOUGH
             </h1>
 
             <div
-              class="w3-row w3-hide-large w3-hide-medium"
+              class="w3-row w3-hide-large"
               style="margin-right: 12%"
             >
               <div
@@ -1336,7 +1323,7 @@
               </div>
             </div>
             <div
-              class="w3-row w3-hide-large w3-hide-medium"
+              class="w3-row w3-hide-large"
               style="margin-right: 12%"
             >
               <div
@@ -1372,7 +1359,7 @@
             <!-- Dough accordion large -->
 
             <div
-              class="w3-row-padding w3-hide-small w3-hide-medium"
+              class="w3-row-padding w3-hide-small"
               style="margin: 15px 0px; margin-bottom: 8em"
             >
               <div class="w3-col s6" style="padding-right: 20px">
@@ -1518,7 +1505,7 @@
             <div class="w3-col s6">
               <!---container-->
 
-              <div class="container w3-hide-small w3-hide-medium">
+              <div class="container w3-hide-small">
                 <img
                   src="./img/costco-without.jpg"
                   alt="Costco"
@@ -1568,7 +1555,7 @@
 
             <!---dukes-->
             <div class="w3-col s6">
-              <div class="container w3-hide-small w3-hide-medium">
+              <div class="container w3-hide-small">
                 <img
                   src="./img/dukes-without.jpg"
                   alt="Dukes"
@@ -1621,7 +1608,7 @@
             <div class="w3-col s6">
               <!---container-->
 
-              <div class="container w3-hide-small w3-hide-medium">
+              <div class="container w3-hide-small">
                 <img
                   src="./img/davenport-without.jpg"
                   alt="Davenport"
@@ -1671,7 +1658,7 @@
 
             <!---dukes-->
             <div class="w3-col s6">
-              <div class="container w3-hide-small w3-hide-medium">
+              <div class="container w3-hide-small">
                 <img
                   src="./img/beckman-apple-without.jpg"
                   alt="Apple"
@@ -1724,7 +1711,7 @@
             <div class="w3-col s6">
               <!---container-->
 
-              <div class="container w3-hide-small w3-hide-medium">
+              <div class="container w3-hide-small">
                 <img
                   src="./img/beckman-pumpkin-without.jpg"
                   alt="Pumpkin"
@@ -1774,7 +1761,7 @@
 
             <!---dukes-->
             <div class="w3-col s6">
-              <div class="container w3-hide-small w3-hide-medium">
+              <div class="container w3-hide-small">
                 <img
                   src="./img/frozen-without.jpg"
                   alt="Frozen"
@@ -1907,7 +1894,7 @@
           "
         >
           <img src="./img/davenport-without.jpg" style="width: 100%" />
-          <div class="text-block w3-hide-large w3-hide-medium">
+          <div class="text-block w3-hide-large">
             <h4
               style="
                 font-size: 1.5em;
@@ -1922,7 +1909,7 @@
               Boston Cream Pie @Davenport Roadhouse
             </h4>
           </div>
-          <div class="text-block w3-hide-small">
+          <div class="text-block w3-hide-small w3-hide-medium">
             <h4
               style="
                 font-size: 1.5em;
