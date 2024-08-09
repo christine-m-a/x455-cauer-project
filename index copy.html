@@ -136,8 +136,8 @@
       body {
         background-color: rgb(247, 174, 122);
         color: black;
-        font: 14px/1.25 "EB Garamond", serif;
-        
+        font: 16px/1.25 "EB Garamond", serif;
+        padding: 0.5em;
       }
 
      
@@ -155,7 +155,7 @@
 
       /*** HEADER ***/
       table thead {
-        border-bottom: 4px solid rgb(204, 100, 25); 
+        border-bottom: 2px solid rgb(227, 144, 92);
       }
 
       table th,
@@ -165,11 +165,10 @@
       }
 
       table th {
-        font: 400 1em/1 "EB Garamond", sans-serif;
+        font: 400 1.25em/1 "EB Garamond", sans-serif;
         letter-spacing: 0.025em;
-        top: 0.125em;
         outline: none;
-        padding-right: 0,5em;
+        padding-right: 2em;
         text-align: left;
         transition: color 0.2s ease-in-out;
       }
@@ -208,7 +207,6 @@
       table th:hover:before,
       table th:focus:before {
         border-bottom-color: rgb(227, 144, 92);
-        
       }
 
       table th:hover:after,
@@ -227,12 +225,10 @@
 
       table th[aria-sort="ascending"]:after {
         border-top-color: rgb(227, 144, 92);
-        
       }
 
       table th[aria-sort="descending"]:before {
         border-bottom-color: rgb(227, 144, 92);
-        
       }
 
       table th[aria-sort="descending"]:after {
@@ -241,23 +237,31 @@
 
       /*** BODY ***/
       table tbody > tr {
-        border-bottom: 2px solid rgb(247, 174, 122);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
         transition: background-color 0.2s ease-in-out,
           border-color 0.2s ease-in-out;
       }
 
       table tbody > tr:hover {
-        background-color: rgb(247, 174, 122);
+        background-color: rgba(255, 255, 255, 0.25);
         border-color: rgb(227, 144, 92);
         color: rgb(204, 100, 25);
       }
 
       /* Name Cell */
       table td[data-label="Name"] {
+        font-weight: 700;
         letter-spacing: 0.05em;
       }
 
-      
+      /*** FOOTER ***/
+      footer {
+        text-align: center;
+      }
+
+      footer a {
+        display: inline-block;
+      }
 
       /************************************************/
       /***************** MEDIA QUERIES ****************/
@@ -290,8 +294,7 @@
 
         table td:before {
           content: attr(data-label);
-          font: 400 1em/1 "EB Garamond", serif;
-          font-weight: bold;
+          font: 400 1.125em/1 "EB Garamond", serif;
           left: 0.5em;
           position: absolute;
           top: 0.125em;
@@ -940,7 +943,6 @@
                       border-bottom: 20px solid rgb(227, 144, 92);
                       text-align: center;
                       font-size: 1.5em;
-                      font-weight: bold;
                     "
                   >
                     Heat Source
@@ -951,9 +953,13 @@
                       border-bottom: 20px solid rgb(227, 144, 92);
                       text-align: center;
                       font-size: 1.5em;
-                      font-weight: bold;
                     "
-                  >Name
+                  >
+                    Name<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 20px; font-size: 20px"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 20px"></i>
                   </th>
                   <th
                     style="
@@ -961,21 +967,26 @@
                       border-bottom: 20px solid rgb(227, 144, 92);
                       text-align: center;
                       font-size: 1.5em;
-                      font-weight: bold;
                     "
                   >
-                    Suitable for
+                    Suitable for<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 20px; font-size: 20px"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 20px"></i>
                   </th>
                   <th
                     style="
                       width: 15em;
                       border-bottom: 20px solid rgb(227, 144, 92);
                       text-align: center;
-                      font-size: 1.5em;
-                      font-weight: bold;
                     "
                   >
-                    °C/°F
+                    °C/°F<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 20px; font-size: 20px"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 20px"></i>
                   </th>
                 </tr>
               </thead>
@@ -1139,9 +1150,73 @@
           </div>
         </div>
 
-        <!--------Heat restyle mobile starts-------->
-       
-       
+        <!--------Heat restyle starts-------->
+        <div class="w3-responsive">
+          
+          <table>
+            <thead>
+              <tr>
+                <th>Heat Source</th>
+                <th>Name</th>
+                <th>Suitable for</th>
+                <th>°C/°F</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Heat Source"><img
+                  src="./img/woodfire.jpg"
+                  alt="airfryer"
+                  style="width: 150px; padding-right: 0;"
+                /></td>
+                <td data-label="Name">Woodfire Oven</td>
+                <td data-label="Suitable for">Pizza</td>
+                <td data-label="°C/°F">370/700</td>
+              </tr>
+              <tr>
+                <td data-label="Heat Source"><img
+                  src="./img/airfry.jpg"
+                  alt="airfryer"
+                  style="width: 150px; padding-right: 0;"
+                /></td>
+                <td data-label="Name">Air Fryer</td>
+                <td data-label="Suitable for">6" Pies</td>
+                <td data-label="°C/°F">200/400</td>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Heat Source"><img
+                  src="./img/fire.jpg"
+                  alt="airfryer"
+                  style="width: 150px; padding-right: 0;"
+                /></td>
+                <td data-label="Name">Open Flame</td>
+                <td data-label="Suitable for">Flammbrot</td>
+                <td data-label="°C/°F">450/840</td>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Heat Source"><img
+                  src="./img/oven.jpg"
+                  alt="airfryer"
+                  style="width: 150px; padding-right: 0;"
+                /></td>
+                <td data-label="Name">Electric Oven</td>
+                <td data-label="Suitable for">Pot Pies</td>
+                <td data-label="°C/°F">230/450</td>
+              </tr>
+            </tbody>
+          </table>
+         
+        </main>
+        </div>
+        <!--------Heat restyle ends---------->
+        
+        
+        
+        
+        <!-- Heat mobile -->
+
         <div
           id="heatmobile"
           class="w3-container w3-padding-top-64 w3-custom2 w3-hide-large w3-hide-medium"
@@ -1150,67 +1225,243 @@
             HEAT
           </h1>
           <div class="w3-responsive">
-          
-            <table>
+            <table id="myTable" class="w3-table-all" style="margin-bottom: 8em">
               <thead>
-                <tr>
-                  <th>Heat Source</th>
-                  <th>Name</th>
-                  <th>Suitable for</th>
-                  <th>°C/°F</th>
+                <tr class="w3-custom" style="padding-bottom: 1em">
+                  <th
+                    style="
+                      width: 5em;
+                      border-bottom: 15px solid rgb(227, 144, 92);
+                      text-align: left;
+                      padding-top: 20px;
+                      font-size: 0.8em;
+                      padding-top: 10px;
+                    "
+                  >
+                    Heat Source
+                  </th>
+                  <th
+                    id="name"
+                    style="
+                      width: 15em;
+                      border-bottom: 15px solid rgb(227, 144, 92);
+                      text-align: left;
+                      padding-top: 20px;
+                      font-size: 0.8em;
+                      padding-top: 10px;
+                    "
+                  >
+                    Name<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 5px; font-size: 12px"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 12px"></i>
+                  </th>
+                  <th
+                    id="suitable"
+                    style="
+                      width: 25em;
+                      border-bottom: 15px solid rgb(227, 144, 92);
+                      text-align: left;
+                      font-size: 0.8em;
+                      padding-top: 10px;
+                    "
+                  >
+                    Suitability<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 5px; font-size: 12px"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 12px"></i>
+                  </th>
+                  <th
+                    id="cf"
+                    style="
+                      width: 15em;
+                      border-bottom: 15px solid rgb(227, 144, 92);
+                      text-align: left;
+                      font-size: 0.8em;
+                      padding-top: 10px;
+                    "
+                  >
+                    °C/°F<i
+                      class="fa fa-long-arrow-down"
+                      style="padding-left: 5px; font-size: 12px"
+                    ></i
+                    ><i class="fa fa-long-arrow-up" style="font-size: 12px"></i>
+                  </th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td data-label="Heat Source"><img
+              <tr
+                class="w3-hover-custom2 w3-custom"
+                style="border-bottom: 15px solid rgb(227, 144, 92)"
+              >
+                <td>
+                  <img
                     src="./img/woodfire.jpg"
-                    alt="airfryer"
-                    style="width: 150px; padding-right: 0;"
-                  /></td>
-                  <td data-label="Name">Woodfire Oven</td>
-                  <td data-label="Suitable for">Pizza</td>
-                  <td data-label="°C/°F">370/700</td>
-                </tr>
-                <tr>
-                  <td data-label="Heat Source"><img
+                    alt="woodfire oven"
+                    style="width: 120px; padding-right: 8px"
+                  />
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-right: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Woodfire Oven
+                </td>
+                <td
+                  style="
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Pizza
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-bottom: 15px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  370/700
+                </td>
+              </tr>
+              <tr
+                class="w3-hover-custom2 w3-custom"
+                style="border-bottom: 15px solid rgb(227, 144, 92)"
+              >
+                <td>
+                  <img
                     src="./img/airfry.jpg"
                     alt="airfryer"
-                    style="width: 150px; padding-right: 0;"
-                  /></td>
-                  <td data-label="Name">Air Fryer</td>
-                  <td data-label="Suitable for">6" Pies</td>
-                  <td data-label="°C/°F">200/400</td>
-                  </td>
-                </tr>
-                <tr>
-                  <td data-label="Heat Source"><img
+                    style="width: 120px; padding-right: 8px"
+                  />
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-right: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Air Fryer
+                </td>
+                <td
+                  style="
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  6” Pies
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  200/400
+                </td>
+              </tr>
+              <tr
+                class="w3-hover-custom2 w3-custom"
+                style="border-bottom: 15px solid rgb(227, 144, 92)"
+              >
+                <td>
+                  <img
                     src="./img/fire.jpg"
-                    alt="airfryer"
-                    style="width: 150px; padding-right: 0;"
-                  /></td>
-                  <td data-label="Name">Open Flame</td>
-                  <td data-label="Suitable for">Flammbrot</td>
-                  <td data-label="°C/°F">450/840</td>
-                  </td>
-                </tr>
-                <tr>
-                  <td data-label="Heat Source"><img
+                    alt="open fire"
+                    style="width: 120px; padding-right: 8px"
+                  />
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-right: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Open Flame
+                </td>
+                <td
+                  style="
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Flammbrot
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  450/840
+                </td>
+              </tr>
+              <tr
+                class="w3-hover-custom2 w3-custom"
+                style="border-bottom: 15px solid rgb(227, 144, 92)"
+              >
+                <td>
+                  <img
                     src="./img/oven.jpg"
-                    alt="airfryer"
-                    style="width: 150px; padding-right: 0;"
-                  /></td>
-                  <td data-label="Name">Electric Oven</td>
-                  <td data-label="Suitable for">Pot Pies</td>
-                  <td data-label="°C/°F">230/450</td>
-                </tr>
-              </tbody>
+                    alt="electric oven"
+                    style="width: 120px; padding-right: 8px"
+                  />
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-right: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Electric Oven
+                </td>
+                <td
+                  style="
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  Pot Pies
+                </td>
+                <td
+                  style="
+                    border-left: 10px solid rgb(204, 100, 25);
+                    border-bottom: 10px solid rgb(227, 144, 92);
+                    text-align: center;
+                    font-size: 1em;
+                  "
+                >
+                  230/450
+                </td>
+              </tr>
             </table>
-          </main>
           </div>
         </div>
-     
- <!--------Heat restyle mobile ends---------->
-
 
         <!-- Dough large -->
         <div
